@@ -1,0 +1,470 @@
+
+/* ==========================================
+   VELOX - PREMIUM NAVIGATION
+========================================== */
+
+.velox-navbar {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 1000;
+
+  width: 100%;
+  height: 96px;
+
+  padding: 0 clamp(24px, 5vw, 90px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+
+  transition:
+    background 0.4s ease,
+    height 0.4s ease,
+    border-color 0.4s ease,
+    backdrop-filter 0.4s ease;
+
+  /* ========================================
+     SCROLLED STATE
+  ======================================== */
+
+  &.is-scrolled {
+    height: 78px;
+
+    background: rgba(9, 9, 9, 0.88);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border-bottom-color: rgba(255, 255, 255, 0.12);
+  }
+
+  /* ========================================
+     BRAND LOGO
+  ======================================== */
+
+  &__logo {
+    position: relative;
+    z-index: 1002;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    flex-shrink: 0;
+
+    width: 160px;
+    line-height: 0;
+
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+
+  &__logo-img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+    max-height: 68px;
+
+    object-fit: contain;
+    object-position: left center;
+  }
+
+  /* ========================================
+     DESKTOP NAVIGATION
+  ======================================== */
+
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: clamp(20px, 2.8vw, 46px);
+  }
+
+  &__nav-link {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+
+    padding: 12px 0;
+
+    color: #d5d5d5;
+
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
+    transition: color 0.3s ease;
+
+    .link-line {
+      position: absolute;
+
+      left: 0;
+      bottom: 4px;
+
+      width: 100%;
+      height: 1px;
+
+      background: var(--accent);
+
+      transform: scaleX(0);
+      transform-origin: left center;
+
+      transition: transform 0.35s ease;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: #ffffff;
+
+      .link-line {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  /* ========================================
+     ACTIONS
+  ======================================== */
+
+  &__actions {
+    position: relative;
+    z-index: 1002;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 23px;
+
+    flex-shrink: 0;
+  }
+
+  /* ========================================
+     SHOP NOW BUTTON
+  ======================================== */
+
+  &__shop {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 13px;
+
+    padding: 15px 21px;
+
+    background: var(--accent);
+    color: #090909;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+
+    transition:
+      background 0.3s ease,
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+
+    svg {
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      background: #ff874d;
+      transform: translateY(-2px);
+
+      box-shadow: 0 8px 30px rgba(255, 100, 28, 0.2);
+
+      svg {
+        transform: translate(2px, -2px);
+      }
+    }
+  }
+
+  /* ========================================
+     CART BUTTON
+  ======================================== */
+
+  &__cart,
+  &__toggle {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    background: transparent;
+    color: #ffffff;
+
+    cursor: pointer;
+  }
+
+  &__cart {
+    width: 38px;
+    height: 42px;
+
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+
+  &__cart-count {
+    position: absolute;
+
+    top: 0;
+    right: -5px;
+
+    width: 17px;
+    height: 17px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+    color: #090909;
+
+    font-size: 9px;
+    font-weight: 700;
+  }
+
+  /* ========================================
+     MOBILE CONTROLS
+  ======================================== */
+
+  &__toggle {
+    display: none;
+
+    width: 38px;
+    height: 42px;
+
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+
+  &__mobile-shop {
+    display: none;
+  }
+}
+
+/* ==========================================
+   TABLET - 1000px
+========================================== */
+
+@media (max-width: 1000px) {
+  .velox-navbar {
+    height: 80px;
+    padding: 0 28px;
+    gap: 20px;
+
+    &__logo {
+      width: 140px;
+    }
+
+    &__links {
+      gap: 18px;
+    }
+
+    &__nav-link {
+      font-size: 11px;
+      letter-spacing: 0.6px;
+    }
+
+    &__shop {
+      padding: 13px 15px;
+      gap: 9px;
+    }
+
+    &__actions {
+      gap: 16px;
+    }
+  }
+}
+
+/* ==========================================
+   MOBILE - 760px
+========================================== */
+
+@media (max-width: 760px) {
+  .velox-navbar {
+    height: 76px;
+    padding: 0 22px;
+
+    &.is-scrolled {
+      height: 70px;
+    }
+
+    /* BRAND */
+
+    &__logo {
+      width: 125px;
+    }
+
+    &__logo-img {
+      max-height: 55px;
+    }
+
+    /* HIDE DESKTOP CTA */
+
+    &__shop {
+      display: none;
+    }
+
+    /* SHOW HAMBURGER */
+
+    &__toggle {
+      display: flex;
+    }
+
+    /* FULLSCREEN MOBILE NAVIGATION */
+
+    &__links {
+      position: fixed;
+
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100dvh;
+
+      padding: 120px 35px 50px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
+      gap: 15px;
+
+      background: #0b0b0b;
+
+      opacity: 0;
+      visibility: hidden;
+
+      transform: translateY(-18px);
+
+      transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease,
+        transform 0.35s ease;
+
+      overflow-y: auto;
+      overscroll-behavior: contain;
+
+      &.is-open {
+        opacity: 1;
+        visibility: visible;
+
+        transform: translateY(0);
+      }
+    }
+
+    /* MOBILE LINKS */
+
+    &__nav-link {
+      font-family: 'Space Grotesk', sans-serif;
+
+      font-size: clamp(28px, 8vw, 46px);
+      font-weight: 700;
+      letter-spacing: -1px;
+
+      text-transform: none;
+      color: #f5f2ed;
+
+      padding: 8px 0;
+
+      &:hover {
+        color: var(--accent);
+      }
+
+      .link-line {
+        display: none;
+      }
+    }
+
+    /* MOBILE SHOP CTA */
+
+    &__mobile-shop {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 14px;
+
+      margin-top: 25px;
+      padding: 17px 22px;
+
+      background: var(--accent);
+      color: #090909;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: #ff874d;
+      }
+    }
+
+    &__actions {
+      gap: 15px;
+    }
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE - 380px
+========================================== */
+
+@media (max-width: 380px) {
+  .velox-navbar {
+    padding: 0 16px;
+
+    &__logo {
+      width: 110px;
+    }
+
+    &__actions {
+      gap: 12px;
+    }
+
+    &__links {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .velox-navbar,
+  .velox-navbar * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

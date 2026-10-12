@@ -1,0 +1,944 @@
+
+/* ==================================================
+   VELOX — PREMIUM CINEMATIC FOOTER
+   Clean Luxury + JARVIS Tech Aesthetic
+================================================== */
+
+$orange: #ff641c;
+$white: #f5f2ed;
+$muted: #a5adb8;
+$dark: #080a0d;
+
+.velox-footer {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  overflow: hidden;
+
+  color: $white;
+  background: $dark;
+
+  font-family: 'DM Sans', 'Inter', sans-serif;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 2;
+
+    width: min(100% - 80px, 1440px);
+    margin: 0 auto;
+  }
+
+  /* ========================================
+     TOP CINEMATIC CTA
+  ======================================== */
+
+  &__cta-section {
+    position: relative;
+    isolation: isolate;
+
+    overflow: hidden;
+
+    padding: 55px 0 35px;
+
+    background: #101319;
+
+    border-top: 1px solid rgba(255, 100, 28, 0.35);
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      inset: 0;
+
+      pointer-events: none;
+
+      background:
+        linear-gradient(
+          rgba(255, 255, 255, 0.025) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.025) 1px,
+          transparent 1px
+        );
+
+      background-size: 85px 85px;
+    }
+  }
+
+  &__cta-glow {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    pointer-events: none;
+
+    background:
+      radial-gradient(
+        ellipse at 65% 70%,
+        rgba(255, 100, 28, 0.17),
+        transparent 50%
+      ),
+      linear-gradient(
+        145deg,
+        #12161c,
+        #090a0d
+      );
+  }
+
+  &__cta-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+  }
+
+  &__system-status,
+  &__system-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #c0c6cf;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+  }
+
+  &__system-label svg {
+    color: $orange;
+  }
+
+  &__live-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+
+    flex-shrink: 0;
+
+    background: $orange;
+    border-radius: 50%;
+
+    box-shadow: 0 0 13px $orange;
+
+    animation: veloxFooterPulse 2.2s ease-in-out infinite;
+  }
+
+  &__cta-content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    padding: 95px 0 85px;
+  }
+
+  &__cta-heading {
+    min-width: 0;
+  }
+
+  &__eyebrow {
+    color: $orange;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.3px;
+  }
+
+  &__cta-heading h2 {
+    margin: 23px 0 0;
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(72px, 10vw, 155px);
+    font-weight: 800;
+
+    line-height: 0.86;
+    letter-spacing: -0.09em;
+
+    span,
+    strong {
+      display: block;
+    }
+
+    span {
+      color: $white;
+    }
+
+    strong {
+      color: $orange;
+      font-weight: 800;
+    }
+  }
+
+  &__cta-aside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 20px;
+
+    width: 300px;
+    flex-shrink: 0;
+
+    padding-bottom: 6px;
+
+    > svg {
+      color: $orange;
+    }
+
+    p {
+      margin: 0;
+
+      color: #bcc4cf;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+  }
+
+  &__cta-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    width: 100%;
+    min-height: 59px;
+
+    padding: 17px 20px;
+
+    color: #090909;
+    background: $orange;
+
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+    transition:
+      transform 0.3s ease,
+      filter 0.3s ease,
+      box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      filter: brightness(1.1);
+
+      box-shadow:
+        0 16px 40px rgba(255, 100, 28, 0.18);
+    }
+  }
+
+  &__cta-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-top: 22px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.13);
+
+    span {
+      color: #8c949e;
+
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+  }
+
+  /* ========================================
+     MAIN FOOTER
+  ======================================== */
+
+  &__main {
+    position: relative;
+    isolation: isolate;
+
+    overflow: hidden;
+
+    padding: 80px 0 28px;
+
+    background:
+      radial-gradient(
+        ellipse at 50% 75%,
+        rgba(255, 100, 28, 0.045),
+        transparent 55%
+      ),
+      #090b0f;
+  }
+
+  /* ========================================
+     BACKGROUND VELOX TYPOGRAPHY
+
+     Faint light-grey watermark.
+     Always BEHIND the actual content.
+  ======================================== */
+
+  &__watermark {
+    position: absolute;
+    z-index: 0;
+
+    top: 53%;
+    left: 50%;
+
+    width: max-content;
+    max-width: none;
+
+    transform: translate(-50%, -50%);
+
+    color: #d4d8dd;
+    opacity: 0.075;
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(150px, 27vw, 470px);
+    font-weight: 800;
+
+    line-height: 0.8;
+    letter-spacing: -0.105em;
+
+    white-space: nowrap;
+
+    pointer-events: none;
+    user-select: none;
+
+    text-shadow: none;
+  }
+
+  /* ========================================
+     CLEAN FOOTER GRID
+  ======================================== */
+
+  &__grid {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+      minmax(0, 1.55fr)
+      minmax(0, 0.8fr)
+      minmax(0, 0.95fr)
+      minmax(0, 1.05fr);
+
+    align-items: start;
+
+    gap: clamp(25px, 3.5vw, 65px);
+
+    padding-bottom: 80px;
+  }
+
+  /* ========================================
+     BRAND LOGO / DESCRIPTION
+  ======================================== */
+
+  &__brand {
+    min-width: 0;
+  }
+
+  &__logo {
+    display: inline-flex;
+    align-items: center;
+
+    img {
+      display: block;
+
+      width: 160px;
+      height: 75px;
+
+      object-fit: contain;
+      object-position: left center;
+
+      filter:
+        drop-shadow(
+          0 0 12px rgba(255, 100, 28, 0.10)
+        );
+    }
+  }
+
+  &__brand p {
+    max-width: 300px;
+
+    margin: 18px 0 0;
+
+    color: #aab2bc;
+
+    font-size: 13px;
+    line-height: 1.95;
+  }
+
+  &__brand-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 26px;
+
+    color: $orange;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+  }
+
+  /* ========================================
+     NAVIGATION LINKS
+  ======================================== */
+
+  &__links {
+    padding-top: 17px;
+
+    h3 {
+      margin: 0 0 28px;
+
+      color: #fff;
+
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.7px;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 17px;
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+
+      color: #b0b8c2;
+
+      font-size: 12px;
+      font-weight: 500;
+
+      transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+
+      svg {
+        color: $orange;
+
+        opacity: 0;
+        transform: translate(-4px, 4px);
+
+        transition:
+          opacity 0.3s ease,
+          transform 0.3s ease;
+      }
+
+      &:hover {
+        color: #fff;
+        transform: translateX(4px);
+
+        svg {
+          opacity: 1;
+          transform: translate(0, 0);
+        }
+      }
+    }
+  }
+
+  /* ========================================
+     ARCHIVE PANEL
+  ======================================== */
+
+  &__archive {
+    position: relative;
+    isolation: isolate;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 225px;
+    padding: 22px;
+
+    overflow: hidden;
+
+    background:
+      linear-gradient(
+        145deg,
+        rgba(255, 100, 28, 0.08),
+        rgba(255, 255, 255, 0.025)
+      ),
+      #13171d;
+
+    border: 1px solid rgba(255, 100, 28, 0.30);
+
+    box-shadow:
+      0 12px 40px rgba(0, 0, 0, 0.18);
+  }
+
+  &__archive-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    color: #bcc3cc;
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+
+    svg {
+      color: $orange;
+    }
+  }
+
+  &__archive-number {
+    margin-top: 22px;
+
+    color: $orange;
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+
+    line-height: 0.95;
+    letter-spacing: -0.07em;
+
+    span {
+      margin-left: 5px;
+
+      color: #a6afb9;
+      font-size: 19px;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+  }
+
+  &__archive p {
+    margin: 20px 0 23px;
+
+    color: #d0d5dc;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    line-height: 1.8;
+  }
+
+  &__archive a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: auto;
+    padding-top: 16px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    color: $orange;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    svg {
+      transition: transform 0.3s;
+    }
+
+    &:hover svg {
+      transform: translateX(5px);
+    }
+  }
+
+  /* ========================================
+     MOVE BEYOND SIGNATURE
+  ======================================== */
+
+  &__statement {
+    position: relative;
+    z-index: 2;
+
+    padding: 35px 0 50px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.13);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+  }
+
+  &__statement-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    > span {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      color: #aeb6c0;
+
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+  }
+
+  &__statement h2 {
+    margin: 40px 0 0;
+
+    color: #f3f0eb;
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(65px, 11.2vw, 165px);
+    font-weight: 800;
+
+    line-height: 0.92;
+    letter-spacing: -0.09em;
+
+    white-space: nowrap;
+
+    span {
+      color: $orange;
+    }
+  }
+
+  &__statement > p {
+    margin: 24px 0 0;
+
+    color: #9ba4b0;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+
+  /* ========================================
+     BOTTOM BAR
+  ======================================== */
+
+  &__bottom {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding-top: 25px;
+  }
+
+  &__copyright {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px 35px;
+
+    span {
+      color: #9da5b0;
+
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+  }
+
+  &__back-top {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+
+    color: #f4f2ee;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    white-space: nowrap;
+
+    > span {
+      display: grid;
+      place-items: center;
+
+      width: 43px;
+      height: 43px;
+
+      color: $orange;
+
+      border: 1px solid rgba(255, 100, 28, 0.55);
+
+      transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+    }
+
+    &:hover > span {
+      background: $orange;
+      color: #090909;
+
+      transform: translateY(-4px);
+    }
+  }
+}
+
+/* ==========================================
+   TABLET RESPONSIVENESS
+========================================== */
+
+@media (max-width: 1100px) {
+  .velox-footer {
+    &__cta-heading h2 {
+      font-size: clamp(65px, 10vw, 112px);
+    }
+
+    &__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 50px 35px;
+    }
+
+    &__archive {
+      max-width: 380px;
+    }
+
+    &__statement h2 {
+      font-size: clamp(60px, 11vw, 120px);
+    }
+
+    &__watermark {
+      top: 55%;
+      font-size: clamp(160px, 30vw, 350px);
+    }
+  }
+}
+
+/* ==========================================
+   MOBILE RESPONSIVENESS
+========================================== */
+
+@media (max-width: 750px) {
+  .velox-footer {
+    &__container {
+      width: min(100% - 36px, 1440px);
+    }
+
+    &__cta-section {
+      padding-top: 40px;
+    }
+
+    &__system-label {
+      display: none;
+    }
+
+    &__cta-content {
+      flex-direction: column;
+      align-items: flex-start;
+
+      gap: 48px;
+      padding: 85px 0 70px;
+    }
+
+    &__cta-heading h2 {
+      font-size: clamp(65px, 13vw, 100px);
+    }
+
+    &__cta-aside {
+      width: min(100%, 390px);
+    }
+
+    &__main {
+      padding-top: 65px;
+    }
+
+    &__grid {
+      gap: 35px 25px;
+      padding-bottom: 65px;
+    }
+
+    &__watermark {
+      top: 57%;
+      font-size: 35vw;
+      opacity: 0.07;
+    }
+
+    &__statement h2 {
+      font-size: clamp(54px, 10.7vw, 83px);
+    }
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+  .velox-footer {
+    &__container {
+      width: min(100% - 28px, 1440px);
+    }
+
+    &__system-status {
+      font-size: 8px;
+      letter-spacing: 0.9px;
+    }
+
+    &__eyebrow {
+      font-size: 9px;
+      letter-spacing: 1.3px;
+    }
+
+    &__cta-content {
+      padding: 75px 0 65px;
+    }
+
+    &__cta-heading h2 {
+      font-size: clamp(59px, 13.5vw, 78px);
+      letter-spacing: -0.075em;
+    }
+
+    &__cta-aside {
+      width: 100%;
+
+      p {
+        font-size: 13px;
+      }
+    }
+
+    &__cta-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+
+      gap: 10px;
+
+      span {
+        font-size: 8px;
+      }
+    }
+
+    &__main {
+      padding-top: 55px;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+
+      gap: 43px 20px;
+    }
+
+    &__brand {
+      grid-column: 1 / -1;
+    }
+
+    &__archive {
+      grid-column: 1 / -1;
+      max-width: none;
+    }
+
+    &__links {
+      padding-top: 0;
+
+      h3 {
+        font-size: 10px;
+        letter-spacing: 1px;
+      }
+
+      a {
+        font-size: 11px;
+      }
+    }
+
+    &__watermark {
+      top: 55%;
+      font-size: 36vw;
+      opacity: 0.065;
+    }
+
+    &__statement {
+      padding-top: 27px;
+      padding-bottom: 35px;
+    }
+
+    &__statement-top {
+      align-items: flex-start;
+      flex-direction: column;
+
+      gap: 12px;
+
+      > span {
+        font-size: 8px;
+        letter-spacing: 0.9px;
+      }
+    }
+
+    &__statement h2 {
+      margin-top: 30px;
+
+      font-size: clamp(48px, 11.5vw, 65px);
+
+      white-space: normal;
+      overflow-wrap: normal;
+
+      span {
+        display: block;
+      }
+    }
+
+    &__statement > p {
+      font-size: 9px;
+      letter-spacing: 1.2px;
+    }
+
+    &__bottom {
+      align-items: flex-start;
+      flex-direction: column;
+
+      gap: 22px;
+    }
+  }
+}
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+@keyframes veloxFooterPulse {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 13px #ff641c;
+  }
+
+  50% {
+    opacity: 0.45;
+    box-shadow: 0 0 5px #ff641c;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .velox-footer *,
+  .velox-footer *::before,
+  .velox-footer *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+}
